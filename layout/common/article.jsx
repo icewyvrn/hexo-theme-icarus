@@ -83,7 +83,7 @@ module.exports = class extends Component {
                         </div>
                     </div> : null}
                     {/* Title */}
-                    {page.title !== '' ? <h1 class="title is-3 is-size-4-mobile" style="font-family: 'Maven Pro', Segoe UI, Frutiger, Dejavu Sans, Helvetica Neue, Arial, sans-serif;">
+                    {page.title !== '' ? <h1 class="title is-3 is-size-4-mobile" style="font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, 'Liberation Sans', Arial, sans-serif; font-weight: bold;">
                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
                     </h1> : null}
                     {/* Content/Excerpt */}

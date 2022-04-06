@@ -53,7 +53,7 @@ module.exports = class extends Component {
 
         const language = page.lang || page.language || config.language;
         const fontCssUrl = {
-            default: fontcdn('Karla:wght@400&family=Maven+Pro:wght@700&family=Roboto+Mono', 'css2'),
+            //default: fontcdn(),
             cyberpunk: fontcdn('Oxanium:wght@300;400;600&family=Roboto+Mono', 'css2')
         };
 
