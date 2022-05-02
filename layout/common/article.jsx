@@ -29,6 +29,7 @@ module.exports = class extends Component {
         const updateTime = article && article.update_time !== undefined ? article.update_time : true;
         const isUpdated = page.updated && !moment(page.date).isSame(moment(page.updated));
         const shouldShowUpdated = page.updated && ((updateTime === 'auto' && isUpdated) || updateTime === true);
+        const isSticky = page.sticky || null;
 
         return <Fragment>
             {/* Main content */}
@@ -45,6 +46,11 @@ module.exports = class extends Component {
                     {/* Metadata */}
                     {page.layout !== 'page' ? <div class="article-meta is-size-7 is-uppercase level is-mobile">
                         <div class="level-left">
+                            {/* Sticky*/}
+                            {isSticky ? <span class="level-item">
+                    <i class="fas fa-arrow-alt-circle-up" style="color:#3273dc"></i>
+                    <span class="level-item" style="color:#3273dc">&nbsp;TOP</span>
+                </span> : null}
                             {/* Creation Date */}
                             {page.date && <span class="level-item" dangerouslySetInnerHTML={{
                                 __html: _p('article.created_at', `<time dateTime="${date_xml(page.date)}" title="${new Date(page.date).toLocaleString()}">${date(page.date)}</time>`)
