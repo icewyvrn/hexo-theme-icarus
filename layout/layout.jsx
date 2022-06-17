@@ -37,22 +37,6 @@ module.exports = class extends Component {
                 <Footer config={config} helper={helper} />
                 <Scripts site={site} config={config} helper={helper} page={page} />
                 <Search config={config} helper={helper} />
-                <script type="text/javascript">
-    function init() {
-      twikoo.init({
-        envId: document.getElementById('envId').value,
-        el: '#tcomment',
-        region: document.getElementById('region').value,
-        path: document.getElementById('path').value,
-        lang: 'en',
-        onCommentLoaded: function () {
-          console.log('评论加载完成')
-        }
-      }).then(function () {
-        console.log('Twikoo 加载完成');
-      });
-    }
-  </script>
             </body>
         </html>;
     }
