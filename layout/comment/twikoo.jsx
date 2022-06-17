@@ -8,7 +8,8 @@ class Twikoo extends Component {
       jsUrl,
     } = this.props;
     const js = `twikoo.init({
-      envId: '${envId}'
+      envId: '${envId}',
+      lang: 'en'
     });`;
     return (
       <Fragment>
