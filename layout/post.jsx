@@ -11,8 +11,8 @@ module.exports = class extends Component {
      style="display:block"
      data-ad-client="ca-pub-9870073903926891"
      data-ad-slot="4222471330"
-     data-ad-format="horizontal"
-     data-full-width-responsive="false"></ins>
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script></div></div></div><Article config={config} page={page} helper={helper} index={false} /></div>;
