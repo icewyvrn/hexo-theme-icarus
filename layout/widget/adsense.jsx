@@ -3,7 +3,7 @@
  * @module view/widget/adsense
  */
 const { Component } = require('inferno');
-const { cacheComponent } = require('../../util/cache');
+const { cacheComponent } = require('hexo-component-inferno/lib/util/cache');
 
 /**
  * Google AdSense widget JSX component.
