@@ -99,9 +99,10 @@ module.exports = class extends Component {
      data-ad-slot="2788145755"
      data-ad-format="auto"
      data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script></div> : null}
+<script
+              dangerouslySetInnerHTML={{
+                __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
+              }}></script></div> : null}
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
                     {/* Licensing block */}
