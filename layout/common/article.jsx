@@ -92,7 +92,7 @@ module.exports = class extends Component {
                     {page.title !== '' ? <h1 class="title is-3 is-size-4-mobile" style="font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, 'Liberation Sans', Arial, sans-serif; font-weight: bold;">
                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
                     </h1> : null}
-                    {!index ? <><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9870073903926891"
+                    {!index ? <div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9870073903926891"
      crossorigin="anonymous"></script>
 <ins class="adsbygoogle"
      style="display:block"
@@ -102,7 +102,7 @@ module.exports = class extends Component {
      data-full-width-responsive="true"></ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script></> : null}
+</script></div> : null}
                     {/* Content/Excerpt */}
                     <div class="content" dangerouslySetInnerHTML={{ __html: index && page.excerpt ? page.excerpt : page.content }}></div>
                     {/* Licensing block */}
