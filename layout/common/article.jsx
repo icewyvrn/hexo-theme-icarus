@@ -110,6 +110,18 @@ module.exports = class extends Component {
                     {!index ? <Share config={config} page={page} helper={helper} /> : null}
                 </article>
             </div>
+            {/* Adsense */}
+            {!index ? <div>
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-9870073903926891"
+         data-ad-slot="2788145755"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script
+                  dangerouslySetInnerHTML={{
+                    __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
+                  }}></script></div> : null}
             {/* Donate button */}
             {!index ? <Donates config={config} helper={helper} /> : null}
             {/* Post navigation */}
