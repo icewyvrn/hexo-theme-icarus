@@ -31,7 +31,7 @@ class AdSense extends Component {
       );
     }
     return (
-            <div style="margin-bottom: 1rem;"><script
+            <div style="margin-bottom: 1rem; margin-top: 1rem;"><script
               async
               src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
             <ins
