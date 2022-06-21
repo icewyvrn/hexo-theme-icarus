@@ -111,7 +111,7 @@ module.exports = class extends Component {
                 </article>
             </div>
             {/* Adsense */}
-            {!index ? <div>
+            {!index ? <div style="margin-top: 1rem;">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-9870073903926891"
