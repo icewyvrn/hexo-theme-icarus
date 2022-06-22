@@ -12,7 +12,7 @@ module.exports = class extends Component {
          style="display:block"
          data-ad-client="ca-pub-9870073903926891"
          data-ad-slot="2892313450"
-         data-ad-format="horizontal"</ins>
+         data-ad-format="horizontal"></ins>
     <script
                   dangerouslySetInnerHTML={{
                     __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
