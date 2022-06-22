@@ -93,13 +93,13 @@ module.exports = class extends Component {
                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
                     </h1> : null}
                     {/* Adsense */}
-            {!index ? <div style="margin-top: 1rem;">
+            {!index ? <div style="margin-bottom: 1rem;">
     <ins class="adsbygoogle"
          style="display:block"
          data-ad-client="ca-pub-9870073903926891"
          data-ad-slot="7851984337"
          data-ad-format="horizontal"
-         data-full-width-responsive="false"></ins>
+         data-full-width-responsive="true"></ins>
     <script
                   dangerouslySetInnerHTML={{
                     __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
