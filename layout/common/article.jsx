@@ -60,7 +60,7 @@ module.exports = class extends Component {
                                 __html: _p('article.updated_at', `<time dateTime="${date_xml(page.updated)}" title="${new Date(page.updated).toLocaleString()}">${date(page.updated)}</time>`)
                             }}></span>}
                             {/* author */}
-                            {page.author ? <span class="level-item"> {page.author} </span> : null}
+                            {page.author ? <span class="level-item"> {page.author} </span> : <span class="level-item"> {config.author} </span>}
                             {/* Categories */}
                             {page.categories && page.categories.length ? <span class="level-item">
                                 {(() => {
