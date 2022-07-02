@@ -49,7 +49,7 @@ module.exports = class extends Component {
                             {/* Sticky*/}
                             {isSticky ? <span class="level-item">
                                 <i class="fas fa-arrow-alt-circle-up" style="color:#3273dc"></i>
-                                <span class="level-item" style="color:#3273dc">&nbsp;TOP</span>
+                                <span class="level-item" style="color:#3273dc">&nbsp;Top</span>
                             </span> : null}
                             {/* Creation Date */}
                             {page.date && <span class="level-item" dangerouslySetInnerHTML={{
@@ -93,9 +93,9 @@ module.exports = class extends Component {
                         {index ? <a class="link-muted" href={url_for(page.link || page.path)}>{page.title}</a> : page.title}
                     </h1> : null}
                     {/* Adsense */}
-                    {!index ? <div style="margin-bottom: 1rem;">
+                    {!index ? <div>
                         <ins class="adsbygoogle"
-                            style="display:block"
+                            style="display:block; margin-bottom: 1rem;"
                             data-ad-client="ca-pub-9870073903926891"
                             data-ad-slot="7851984337"
                             data-ad-format="horizontal"

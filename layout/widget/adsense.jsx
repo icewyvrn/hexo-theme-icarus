@@ -31,20 +31,20 @@ class AdSense extends Component {
       );
     }
     return (
-            <div style="margin-bottom: 1rem; margin-top: 1rem;"><script
-              async
-              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-            <ins
-              class="adsbygoogle"
-              style="display:block"
-              data-ad-client={clientId}
-              data-ad-slot={slotId}
-              data-ad-format="rectangle"
-              data-full-width-responsive="true"></ins>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
-              }}></script></div>
+      <div><script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <ins
+          class="adsbygoogle"
+          style="display:block; margin-bottom: 1rem; margin-top: 1rem;"
+          data-ad-client={clientId}
+          data-ad-slot={slotId}
+          data-ad-format="rectangle"
+          data-full-width-responsive="true"></ins>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: '(adsbygoogle = window.adsbygoogle || []).push({});',
+          }}></script></div>
     );
   }
 }
