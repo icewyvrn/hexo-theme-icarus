@@ -31,12 +31,12 @@ class AdSense extends Component {
       );
     }
     return (
-      <div class="ads-widget"><script
+      <div style="margin-bottom: 1rem; margin-top: 1rem;"><script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <ins
           class="adsbygoogle"
-          style="display:block; margin-bottom: 1rem; margin-top: 1rem;"
+          style="display:block"
           data-ad-client={clientId}
           data-ad-slot={slotId}
           data-ad-format="rectangle"
