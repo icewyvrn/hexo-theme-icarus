@@ -4,7 +4,7 @@ bulma-stylus-root = '../../../../node_modules/bulma-stylus/stylus'
  *   Override Bulma CSS Framework
  * --------------------------------- */
 $body-size ?= 14px
-$body-background-color ?= #f7f7f7
+$body-background-color ?= #fff
 
 $family-sans-serif ?= Helvetica, -apple-system, BlinkMacSystemFont, Roboto, 'Liberation Sans', Arial, sans-serif
 $family-code ?= 'Roboto Mono', 'Lucida Console', Monaco, monospace
@@ -14,6 +14,7 @@ $size-small ?= .75rem
 
 $size-3 ?= 1.6rem
 $size-4 ?= 1.4rem
+$size-2 ?= 1.3rem
 
 $primary ?= $blue
 $custom-colors ?= {
@@ -79,10 +80,10 @@ body
     min-height: 100%
     display: flex
     flex-direction: column
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #e8eced 100%)
 
 body > .section
     flex-grow: 1
+    padding: 1rem 1.5rem;
 
 +desktop()
     ::-webkit-scrollbar
