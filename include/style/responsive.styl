@@ -2,9 +2,13 @@
  *         Responsive Layout
  * --------------------------------- */
 +widescreen()
-    .is-1-column .container, .is-2-column .container
+    .is-2-column .container
         max-width: $desktop - 2 * $gap
         width: $desktop - 2 * $gap
+
+    .is-1-column .container
+        max-width: 760px
+        width: 760px
 
 +fullhd()
     .is-2-column .container
@@ -12,8 +16,8 @@
         width: $widescreen - 2 * $gap
 
     .is-1-column .container
-        max-width: $desktop - 2 * $gap
-        width: $desktop - 2 * $gap
+        max-width: 760px
+        width: 760px
 
 +tablet()
     .is-sticky
