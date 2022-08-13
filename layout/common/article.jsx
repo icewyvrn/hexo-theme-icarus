@@ -139,7 +139,7 @@ module.exports = class extends Component {
                 <div class="level-left">
                   {/* Creation Date */}
 
-                  {index && page.date && !shouldShowUpdated ? (
+                  {page.date && !shouldShowUpdated ? (
                     <span
                       class="level-item"
                       dangerouslySetInnerHTML={{
