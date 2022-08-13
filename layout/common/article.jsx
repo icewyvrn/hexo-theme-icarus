@@ -233,7 +233,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class="content"
-              style={`${index ? "font-size: 1.1rem;" : null}`}
+              style={`${index ? "font-size: 1.1rem;" : "font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;"}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? page.excerpt : page.content,
               }}
