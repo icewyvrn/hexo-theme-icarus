@@ -198,7 +198,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Thumbnail */}
             {!index && cover ? (
-              <div class="card-image" style="padding-bottom: 1.5rem;">
+              <div class="card-image" style="padding-bottom: 1rem;">
                 {!index ? (
                   <span class="image">
                     <img
