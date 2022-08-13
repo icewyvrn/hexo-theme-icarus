@@ -103,9 +103,9 @@ module.exports = class extends Component {
             {page.title !== "" ? (
               <h1
                 class={`title is-${index ? 4 : 3} is-size-${
-                  index ? 2 : 4
+                  index ? 2 : 3
                 }-mobile`}
-                style={`font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: 600;margin-bottom: 0.6rem;line-height: 30px;`}
+                style={`font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: ${index ? 600 : 700};margin-bottom: 0.6rem;line-height: 30px;`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
@@ -233,7 +233,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class="content"
-              style={`${index ? "font-size: 1.1rem;" : "font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;"}`}
+              style={`${index ? "font-size: 1.1rem;color: #374151;" : "font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;color: #4B5563;"}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? page.excerpt : page.content,
               }}
