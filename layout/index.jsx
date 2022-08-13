@@ -9,7 +9,7 @@ module.exports = class extends Component {
 
         return <Fragment>
             <div><ins class="adsbygoogle"
-                style="display:block; margin-bottom: 1rem;"
+                style="display:block; margin-top: 1rem; margin-bottom: 1rem;"
                 data-ad-client="ca-pub-9870073903926891"
                 data-ad-slot="2892313450"
                 data-ad-format="horizontal"
