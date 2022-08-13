@@ -41,20 +41,6 @@ module.exports = class extends Component {
       <Fragment>
         {/* Main content */}
         <div class="card-none" style="border-bottom: 1px dashed #d9d9d9;">
-          {/* Thumbnail */}
-          {/* {cover ? (
-            <div class="card-image">
-              {index ? (
-                <a href={url_for(page.link || page.path)} class="image is-7by3">
-                  <img class="fill" src={cover} alt={page.title || cover} />
-                </a>
-              ) : (
-                <span class="image is-7by3">
-                  <img class="fill" src={cover} alt={page.title || cover} />
-                </span>
-              )}
-            </div>
-          ) : null} */}
           <article
             class={`card-content article${
               "direction" in page ? " " + page.direction : ""
@@ -77,7 +63,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Metadata */}
             {page.layout !== "page" ? (
-              <div class="article-meta is-size-6 has-text-weight-bold level is-mobile">
+              <div class="article-meta is-size-6 has-text-weight-semibold level is-mobile">
                 <div class="level-left">
                   {/* Sticky*/}
                   {isSticky ? (
@@ -119,7 +105,7 @@ module.exports = class extends Component {
                 class={`title is-${index ? 4 : 3} is-size-${
                   index ? 2 : 4
                 }-mobile`}
-                style={`font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, 'Liberation Sans', Arial, sans-serif; font-weight: bold;margin-bottom: 0.6rem;line-height: 30px;`}
+                style={`font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: 600;margin-bottom: 0.6rem;line-height: 30px;`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
@@ -133,7 +119,7 @@ module.exports = class extends Component {
             {/* Metadata */}
             {page.layout !== "page" ? (
               <div
-                class="article-meta is-size-6 has-text-weight-bold level is-mobile"
+                class="article-meta is-size-6 has-text-weight-semibold level is-mobile"
                 style="margin-bottom: 1.1rem;"
               >
                 <div class="level-left">
@@ -247,7 +233,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class="content"
-              style={`${index ? "font-size: 1rem;" : null}`}
+              style={`${index ? "font-size: 1.1rem;" : null}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? page.excerpt : page.content,
               }}
