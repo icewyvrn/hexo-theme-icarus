@@ -60,12 +60,13 @@ module.exports = class extends Component {
               "direction" in page ? " " + page.direction : ""
             }`}
             role="article"
+            style={`${index ? "padding: 1rem 1rem;" : null}`}
           >
             {/* Post Cover Square */}
             {index && cover ? (
               <div
                 class="post-cover-square"
-                style="float: right;width: 100px;height: 96px;margin-left: 15px;"
+                style="float: right;width: 100px;height: 96px;margin-left: 15px;margin-bottom: 10px;"
               >
                 <a
                   href={url_for(page.link || page.path)}
@@ -76,7 +77,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Metadata */}
             {page.layout !== "page" ? (
-              <div class="article-meta is-size-7 is-uppercase level is-mobile">
+              <div class="article-meta is-size-6 has-text-weight-bold level is-mobile">
                 <div class="level-left">
                   {/* Sticky*/}
                   {isSticky ? (
@@ -90,45 +91,6 @@ module.exports = class extends Component {
                       </span>
                     </span>
                   ) : null}
-                  {/* Creation Date */}
-
-                  {index && page.date && !shouldShowUpdated ? (
-                    <span
-                      class="level-item"
-                      dangerouslySetInnerHTML={{
-                        __html: _p(
-                          "article.created_at",
-                          `<time dateTime="${date_xml(
-                            page.date
-                          )}" title="${new Date(
-                            page.date
-                          ).toLocaleString()}">${date(page.date)}</time>`
-                        ),
-                      }}
-                    ></span>
-                  ) : null}
-                  {/* Last Update Date */}
-                  {shouldShowUpdated && (
-                    <span
-                      class="level-item"
-                      dangerouslySetInnerHTML={{
-                        __html: _p(
-                          "article.updated_at",
-                          `<time dateTime="${date_xml(
-                            page.updated
-                          )}" title="${new Date(
-                            page.updated
-                          ).toLocaleString()}">${date(page.updated)}</time>`
-                        ),
-                      }}
-                    ></span>
-                  )}
-                  {/* author */}
-                  {page.author ? (
-                    <span class="level-item"> {page.author} </span>
-                  ) : (
-                    <span class="level-item"> {config.author} </span>
-                  )}
                   {/* Categories */}
                   {page.categories && page.categories.length ? (
                     <span class="level-item">
@@ -148,6 +110,72 @@ module.exports = class extends Component {
                       })()}
                     </span>
                   ) : null}
+                </div>
+              </div>
+            ) : null}
+            {/* Title */}
+            {page.title !== "" ? (
+              <h1
+                class={`title is-${index ? 4 : 3} is-size-${
+                  index ? 2 : 4
+                }-mobile`}
+                style={`font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, 'Liberation Sans', Arial, sans-serif; font-weight: bold;margin-bottom: 0.6rem;line-height: 30px;`}
+              >
+                {index ? (
+                  <a class="link-muted" href={url_for(page.link || page.path)}>
+                    {page.title}
+                  </a>
+                ) : (
+                  page.title
+                )}
+              </h1>
+            ) : null}
+            {/* Metadata */}
+            {page.layout !== "page" ? (
+              <div
+                class="article-meta is-size-6 has-text-weight-bold level is-mobile"
+                style="margin-bottom: 1.1rem;"
+              >
+                <div class="level-left">
+                  {/* Creation Date */}
+
+                  {index && page.date && !shouldShowUpdated ? (
+                    <span
+                      class="level-item"
+                      dangerouslySetInnerHTML={{
+                        __html: _p(
+                          // "article.created_at",
+                          `<time dateTime="${date_xml(
+                            page.date
+                          )}" title="${new Date(
+                            page.date
+                          ).toLocaleString()}">${date(page.date)}</time>`
+                        ),
+                      }}
+                    ></span>
+                  ) : null}
+                  {/* Last Update Date */}
+                  {shouldShowUpdated && (
+                    <span
+                      class="level-item"
+                      dangerouslySetInnerHTML={{
+                        __html: _p(
+                          // "article.updated_at",
+                          `<time dateTime="${date_xml(
+                            page.updated
+                          )}" title="${new Date(
+                            page.updated
+                          ).toLocaleString()}">${date(page.updated)}</time>`
+                        ),
+                      }}
+                    ></span>
+                  )}
+                  {/* author */}
+                  {page.author ? (
+                    <span class="level-item"> {page.author} </span>
+                  ) : (
+                    <span class="level-item"> {config.author} </span>
+                  )}
                   {/* Read time */}
                   {article && article.readtime && article.readtime === true ? (
                     <span class="level-item">
@@ -181,23 +209,6 @@ module.exports = class extends Component {
                   ) : null}
                 </div>
               </div>
-            ) : null}
-            {/* Title */}
-            {page.title !== "" ? (
-              <h1
-                class={`title is-${index ? 4 : 3} is-size-${
-                  index ? 2 : 4
-                }-mobile`}
-                style="font-family: Helvetica, -apple-system, BlinkMacSystemFont, Roboto, 'Liberation Sans', Arial, sans-serif; font-weight: bold;"
-              >
-                {index ? (
-                  <a class="link-muted" href={url_for(page.link || page.path)}>
-                    {page.title}
-                  </a>
-                ) : (
-                  page.title
-                )}
-              </h1>
             ) : null}
             {/* Thumbnail */}
             {!index && cover ? (
@@ -236,6 +247,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class="content"
+              style={`${index ? "font-size: 1rem;" : null}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? page.excerpt : page.content,
               }}
