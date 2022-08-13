@@ -216,7 +216,7 @@ module.exports = class extends Component {
               <div>
                 <ins
                   class="adsbygoogle"
-                  style="display:block; margin-bottom: 1rem;"
+                  style="display:block; margin-top: 0.5rem; margin-bottom: 1rem;"
                   data-ad-client="ca-pub-9870073903926891"
                   data-ad-slot="7851984337"
                   data-ad-format="horizontal"
