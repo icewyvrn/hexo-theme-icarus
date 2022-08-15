@@ -48,6 +48,9 @@ class Navbar extends Component {
                 </div>
                 <div class="navbar-menu">
                     {Object.keys(menu).length ? <div class="navbar-start">
+                    	<a class="navbar-item navbar-logo-mobile" href={siteUrl} style="display: none;">
+                        {navbarLogo}
+                    </a>
                         {Object.keys(menu).map(name => {
                             const item = menu[name];
                             return <a class={classname({ 'navbar-item': true, 'is-active': item.active })} href={item.url}>{name}</a>;
