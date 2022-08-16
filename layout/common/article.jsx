@@ -105,7 +105,7 @@ module.exports = class extends Component {
                 class={`title is-${index ? 4 : 3} is-size-${
                   index ? 2 : 3
                 }-mobile`}
-                style={`font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: ${index ? 600 : 700};margin-bottom: 0.6rem;line-height: 30px;`}
+                style={`font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: ${index ? 600 : 700};margin-bottom: 0.7rem;line-height: 30px;`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
