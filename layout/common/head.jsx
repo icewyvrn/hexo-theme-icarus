@@ -222,14 +222,14 @@ module.exports = class extends Component {
         <link rel="stylesheet" href={fontCssUrl[variant]} />
         <link
           rel="preload"
-          href="fonts/IBMPlexSansVar-Roman.woff2"
+          href="/fonts/IBMPlexSansVar-Roman.woff2"
           as="font"
           type="font/woff2"
           crossorigin="anonymous"
         />
         <link
           rel="preload"
-          href="fonts/IBMPlexSansVar-Italic.woff2"
+          href="/fonts/IBMPlexSansVar-Italic.woff2"
           as="font"
           type="font/woff2"
           crossorigin="anonymous"
