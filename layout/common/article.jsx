@@ -204,6 +204,7 @@ module.exports = class extends Component {
                     <img
                       class="fill"
                       src={cover}
+                      loading="eager"
                       alt={page.title || cover}
                       style="max-height: 330px;"
                     />
