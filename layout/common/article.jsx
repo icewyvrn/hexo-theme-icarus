@@ -313,7 +313,7 @@ module.exports = class extends Component {
                   } link-muted`}
                   href={url_for(page.prev.path)}
                 >
-                  <i class="level-item fas fa-chevron-left"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left" style="margin-right: 9px;" width="19" height="19"><polyline points="15 18 9 12 15 6"></polyline></svg>
                   <span class="level-item">{page.prev.title}</span>
                 </a>
               </div>
@@ -327,7 +327,7 @@ module.exports = class extends Component {
                   href={url_for(page.next.path)}
                 >
                   <span class="level-item">{page.next.title}</span>
-                  <i class="level-item fas fa-chevron-right"></i>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right" width="19" height="19"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </a>
               </div>
             ) : null}
