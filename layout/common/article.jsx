@@ -200,13 +200,13 @@ module.exports = class extends Component {
             {!index && cover ? (
               <div class="card-image" style="padding-bottom: 0.5rem;">
                 {!index ? (
-                  <span class="image">
+                  <span class="post-image">
                     <img
                       class="fill"
                       src={cover}
                       loading="eager"
                       alt={page.title || cover}
-                      style="max-height: 330px;"
+                      style="background-color: #262a35;"
                     />
                   </span>
                 ) : null}
