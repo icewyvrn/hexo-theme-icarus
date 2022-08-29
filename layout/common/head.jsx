@@ -138,7 +138,7 @@ module.exports = class extends Component {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link as="font" crossorigin="anonymous" href="/fonts/IBMPlexSansVar-Roman.woff2" rel="preload" />
+        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/f621bcd43b215e93b23119237ac9e6a5bc4dd398/83f81/fonts/ibmplexsansvar-roman.woff2" rel="preload" />
         {noIndex ? <meta name="robots" content="noindex" /> : null}
         {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
