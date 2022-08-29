@@ -234,7 +234,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class="content"
-              style={`${index ? "font-size: 1.1rem;color: #374151;" : "font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Apple Color Emoji,Arial,sans-serif,Segoe UI Emoji,Segoe UI Symbol;color: #4B5563;"}`}
+              style={`${index ? "font-size: 1.1rem;color: #3A4F66;" : "font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;color: #3A4F66;"}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? page.excerpt : page.content,
               }}
