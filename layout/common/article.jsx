@@ -135,7 +135,7 @@ module.exports = class extends Component {
                             page.date
                           )}" title="${new Date(
                             page.date
-                          ).toLocaleString()}">${date(page.date)}</time>`
+                          ).toLocaleString()}">${new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(page.date)}</time>`
                         ),
                       }}
                     ></span>
@@ -151,7 +151,7 @@ module.exports = class extends Component {
                             page.updated
                           )}" title="${new Date(
                             page.updated
-                          ).toLocaleString()}">${date(page.updated)}</time>`
+                          ).toLocaleString()}">${new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(page.updated)}</time>`
                         ),
                       }}
                     ></span>

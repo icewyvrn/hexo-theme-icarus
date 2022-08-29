@@ -20,7 +20,7 @@ class Footer extends Component {
       if (logo.text) {
         footerLogo = logo.text;
       } else {
-        footerLogo = <img src={logoUrl} alt={siteTitle} height="28" />;
+        footerLogo = <img src={logoUrl} alt={siteTitle} height="28" width="109.95" />;
       }
     } else {
       footerLogo = siteTitle;
@@ -37,7 +37,7 @@ class Footer extends Component {
               <p class="is-size-7">
                 <span
                   dangerouslySetInnerHTML={{
-                    __html: `&copy; ${siteYear} ${author || siteTitle}`,
+                    __html: `&copy; ${siteYear} ${siteTitle}`,
                   }}
                 ></span>
                 &nbsp;&nbsp;Powered by{" "}
@@ -76,25 +76,23 @@ class Footer extends Component {
                 <p class="control">
                   <a
                     class="button is-transparent is-large"
-                    style="padding-left: 0.9em; padding-right: 0.9em;"
                     target="_blank"
                     rel="noopener"
                     title="RSS Feed"
                     href="/feed.xml"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss" width="18" height="29"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor" stroke="currentColor" width="17"><path d="M400 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zM112 416c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm157.533 0h-34.335c-6.011 0-11.051-4.636-11.442-10.634-5.214-80.05-69.243-143.92-149.123-149.123-5.997-.39-10.633-5.431-10.633-11.441v-34.335c0-6.535 5.468-11.777 11.994-11.425 110.546 5.974 198.997 94.536 204.964 204.964.352 6.526-4.89 11.994-11.425 11.994zm103.027 0h-34.334c-6.161 0-11.175-4.882-11.427-11.038-5.598-136.535-115.204-246.161-251.76-251.76C68.882 152.949 64 147.935 64 141.774V107.44c0-6.454 5.338-11.664 11.787-11.432 167.83 6.025 302.21 141.191 308.205 308.205.232 6.449-4.978 11.787-11.432 11.787z"/></svg>
                   </a>
                 </p>
                 <p class="control">
                   <a
                     class="button is-transparent is-large"
-                    style="padding-left: 0.9em; padding-right: 0.9em;"
                     target="_blank"
                     rel="noopener"
                     title="Sitemap"
                     href="/sitemap.xml"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="29" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" stroke="currentColor" width="19"><path d="M80 368H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm0-320H16A16 16 0 0 0 0 64v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16V64a16 16 0 0 0-16-16zm0 160H16a16 16 0 0 0-16 16v64a16 16 0 0 0 16 16h64a16 16 0 0 0 16-16v-64a16 16 0 0 0-16-16zm416 176H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"/></svg>
                   </a>
                 </p>
               </div>
