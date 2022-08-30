@@ -139,6 +139,7 @@ module.exports = class extends Component {
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
         <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/c0d44067fbe24774fe5275c2445aacb07391b340/795d3/fonts/chivo-v17-latin-regular.woff2" rel="preload" />
+        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/4bbd0fcdbcd42fdacafba9059f7f8ca09bffef07/66761/fonts/chivo-v17-latin-700.woff2" rel="preload" />
         <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/469aa089ed244cf554af07d3d2fe3b92dd20f437/b05c7/fonts/chivo-v17-latin-900.woff2" rel="preload" />
         {noIndex ? <meta name="robots" content="noindex" /> : null}
         {meta && meta.length ? <MetaTags meta={meta} /> : null}
