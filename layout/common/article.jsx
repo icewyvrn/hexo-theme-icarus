@@ -236,7 +236,7 @@ module.exports = class extends Component {
               class={`${index ? "content content-index" : "content"}`}
               style={`${index ? "font-size: 1.1rem;color: #585b63;letter-spacing: .02em;" : "font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;color: #333;letter-spacing: 0.02em;"}`}
               dangerouslySetInnerHTML={{
-                __html: index && page.excerpt ? page.excerpt : page.content,
+                __html: index && page.excerpt ? `${page.excerpt.length > 164 ? page.excerpt.replace(/(.{164})..+/, "$1…") : page.excerpt}` : page.content,
               }}
             ></div>
             {/* Licensing block */}
