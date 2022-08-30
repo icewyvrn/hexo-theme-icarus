@@ -63,7 +63,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Metadata */}
             {page.layout !== "page" ? (
-              <div class="article-meta is-size-6 has-text-weight-semibold level is-mobile">
+              <div class="article-meta has-text-weight-normal level is-mobile" style="text-transform: uppercase;letter-spacing: .2em;font-size: 12px">
                 <div class="level-left">
                   {/* Sticky*/}
                   {isSticky ? (
@@ -89,7 +89,7 @@ module.exports = class extends Component {
                             </a>
                           );
                           if (i < page.categories.length - 1) {
-                            categories.push(<span>&nbsp;/&nbsp;</span>);
+                            categories.push(<span>&nbsp;&nbsp;</span>);
                           }
                         });
                         return categories;
@@ -105,7 +105,7 @@ module.exports = class extends Component {
                 class={`title is-${index ? 4 : 3} is-size-${
                   index ? 2 : 3
                 }-mobile`}
-                style={`font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: ${index ? 600 : 700};margin-bottom: 0.7rem;line-height: 30px;`}
+                style={`font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: 400;margin-bottom: 0.7rem;line-height: ${index ? '30px' : '35px'};letter-spacing: -.03em;`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
@@ -119,7 +119,7 @@ module.exports = class extends Component {
             {/* Metadata */}
             {page.layout !== "page" ? (
               <div
-                class="article-meta is-size-6 has-text-weight-semibold level is-mobile"
+                class="article-meta is-size-6 has-text-weight-normal level is-mobile"
                 style="margin-bottom: 1.1rem;"
               >
                 <div class="level-left">
@@ -198,7 +198,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Thumbnail */}
             {!index && cover ? (
-              <div class="card-image" style="margin-bottom: 1rem;">
+              <div class="card-image" style="margin-bottom: 21.58px;margin-top: 21.58px;">
                 {!index ? (
                   <span class="post-image">
                     <img
@@ -233,8 +233,8 @@ module.exports = class extends Component {
             ) : null}
             {/* Content/Excerpt */}
             <div
-              class="content"
-              style={`${index ? "font-size: 1.1rem;color: #3A4F66;" : "font-family: IBM Plex Sans,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;color: #3A4F66;"}`}
+              class={`${index ? "content content-index" : "content"}`}
+              style={`${index ? "font-size: 1.1rem;color: #585b63;letter-spacing: .02em;" : "font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;color: #333;letter-spacing: 0.02em;"}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? page.excerpt : page.content,
               }}

@@ -1,7 +1,7 @@
 /* ---------------------------------
  *    Article Summary and Content
  * --------------------------------- */
-$article-font-size ?= clamp(1rem, 2rem + 0.18vw, 1.125rem)
+$article-font-size ?= 16px
 
 article
     &.media
@@ -41,7 +41,7 @@ article
 
     &.article
         .article-meta, .article-tags
-            color: #3a4f66
+            color: #333
 
         .article-meta
             overflow-x: auto
@@ -54,6 +54,7 @@ article
             word-wrap: break-word
             font-size: $article-font-size
             line-height: 2rem
+            white-space: pre-wrap;
 
             h1
                 font-size: 1.675em
@@ -61,20 +62,27 @@ article
                 margin-top:1.08em
 
             h2
-                font-size: 1.45em
-                font-weight: 600
+                font-size: 24px
+                font-weight: 400
+                letter-spacing: -.02em;
 
             h3
-                font-size: 1.35em
-                font-weight: 600
+                font-size: 12px
+                font-weight: 900
+                text-transform: uppercase;
+                letter-spacing: .2em;
 
             h4
-                font-size: 1.125em
-                font-weight: 600
+                font-size: 12px
+                font-weight: 900
+                text-transform: uppercase;
+                letter-spacing: .2em;
 
             h5
-                font-size: 1em
-                font-weight: 600
+                font-size: 12px
+                font-weight: 900
+                text-transform: uppercase;
+                letter-spacing: .2em;
 
             pre
                 font-size: .85em
@@ -105,6 +113,13 @@ article
         .article-tags
             display: flex
             flex-wrap: wrap
+            
+        .content > *
+            margin-bottom: 21.58px
+            margin-top: 21.58px
+            
+        .content-index > *
+            margin: 0
 
 .rtl
     direction: rtl
