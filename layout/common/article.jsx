@@ -89,7 +89,7 @@ module.exports = class extends Component {
                             </a>
                           );
                           if (i < page.categories.length - 1) {
-                            categories.push(<span>&nbsp;&nbsp;</span>);
+                            categories.push(<span>&nbsp;/&nbsp;</span>);
                           }
                         });
                         return categories;
@@ -105,7 +105,7 @@ module.exports = class extends Component {
                 class={`title is-${index ? 4 : 3} is-size-${
                   index ? 2 : 3
                 }-mobile`}
-                style={`font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: 400;margin-bottom: 0.7rem;line-height: ${index ? '30px' : '35px'};letter-spacing: -.03em;`}
+                style={`font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: 700;margin-bottom: 0.7rem;line-height: ${index ? '30px' : '35px'};letter-spacing: -.03em;`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
@@ -313,7 +313,7 @@ module.exports = class extends Component {
                   } link-muted`}
                   href={url_for(page.prev.path)}
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left" style="margin-right: 9px;" width="19" height="19"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left" style="margin-right: 9px;min-width: 19px;" width="19" height="19"><polyline points="15 18 9 12 15 6"></polyline></svg>
                   <span class="level-item">{page.prev.title}</span>
                 </a>
               </div>
@@ -327,7 +327,7 @@ module.exports = class extends Component {
                   href={url_for(page.next.path)}
                 >
                   <span class="level-item">{page.next.title}</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right" width="19" height="19"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right" width="19" height="19" style="min-width: 19px;"><polyline points="9 18 15 12 9 6"></polyline></svg>
                 </a>
               </div>
             ) : null}
