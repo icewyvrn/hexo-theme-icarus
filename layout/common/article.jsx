@@ -76,7 +76,7 @@ module.exports = class extends Component {
             {/* Title */}
             {page.title !== "" ? (
               <h1
-                class={`title is-${index ? 5 : 4} is-size-${index ? 2 : 5}-mobile`}
+                class={`title heading-${index ? 'medium' : 'large'} heading-${index ? 'medium' : 'large'}-mobile `}
                 style={`font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-weight: 500;margin-bottom: 5px;line-height: ${'1.3'};`}
               >
                 {index ? (
