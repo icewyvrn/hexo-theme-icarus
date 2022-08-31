@@ -41,20 +41,29 @@ article
 
     &.article
         .article-meta, .article-tags
-            color: #333
+            color: $primary-text-color
 
         .article-meta
             overflow-x: auto
-            margin-bottom: .45rem
+            margin-bottom: 15px
+            font-size: 11px
+            font-weight: 700
+            text-transform: uppercase
 
         .article-more
             @extend .button.is-light
+        
+        .meta-grey
+            color: $secondary-text-color
+        
+        .brand-color
+            color: $brand-color
 
         .content
             word-wrap: break-word
             font-size: $article-font-size
-            line-height: 2rem
-            white-space: pre-wrap;
+            line-height: 1.7
+            white-space: pre-wrap
 
             h1
                 font-size: 1.675em
@@ -62,21 +71,22 @@ article
                 margin-top:1.08em
 
             h2
-                font-size: 22px
-                font-weight: 400
-                letter-spacing: -.02em;
+                font-size: 17px
+                font-weight: 700
+                letter-spacing: 0.1em
+                text-transform: uppercase
 
             h3
                 font-size: 12px
-                font-weight: 900
-                text-transform: uppercase;
-                letter-spacing: .2em;
+                font-weight: 700
+                text-transform: uppercase
+                letter-spacing: .1em
 
             h4
                 font-size: 12px
-                font-weight: 900
-                text-transform: uppercase;
-                letter-spacing: .2em;
+                font-weight: 700
+                text-transform: uppercase
+                letter-spacing: .1em
 
             h5
                 font-size: 12px
@@ -219,3 +229,14 @@ a
             flex-shrink: 1
             word-wrap: break-word
             white-space: normal
+            
+.post-cover-full-width
+    height: 20rem;
+    pointer-events: none;
+    margin-top: -0.25rem;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+    
+.message
+    font-size: 1rem;
+    color: inherit;

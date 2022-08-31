@@ -41,6 +41,18 @@ module.exports = class extends Component {
       <Fragment>
         {/* Main content */}
         <div class="card-none" style="border-bottom: 1px dashed #d9d9d9;">
+            {/* Post Hero Image */}
+            {!index && cover ? (
+              <div
+                class="post-cover-full-width"
+              >
+                <a
+                  href={url_for(page.link || page.path)}
+                  title={page.title || cover}
+                  style={`background-image:url(${cover});display: block;width: 100%;height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;background-color: #262a35;padding: 0;margin: 0;`}
+                ></a>
+              </div>
+            ) : null}
           <article
             class={`card-content article${
               "direction" in page ? " " + page.direction : ""
@@ -52,7 +64,7 @@ module.exports = class extends Component {
             {index && cover ? (
               <div
                 class="post-cover-square"
-                style="float: right;width: 100px;height: 96px;margin-left: 15px;margin-bottom: 10px;"
+                style="float: right;width: 100px;height: 96px;margin-left: 15px;margin-bottom: 10px;border-radius: 3px;"
               >
                 <a
                   href={url_for(page.link || page.path)}
@@ -61,51 +73,11 @@ module.exports = class extends Component {
                 ></a>
               </div>
             ) : null}
-            {/* Metadata */}
-            {page.layout !== "page" ? (
-              <div class="article-meta has-text-weight-normal level is-mobile" style="text-transform: uppercase;letter-spacing: .2em;font-size: 12px">
-                <div class="level-left">
-                  {/* Sticky*/}
-                  {isSticky ? (
-                    <span class="level-item">
-                      <i
-                        class="fas fa-arrow-alt-circle-up"
-                        style="color:#3273dc"
-                      ></i>
-                      <span class="level-item" style="color:#3273dc">
-                        &nbsp;Top
-                      </span>
-                    </span>
-                  ) : null}
-                  {/* Categories */}
-                  {page.categories && page.categories.length ? (
-                    <span class="level-item">
-                      {(() => {
-                        const categories = [];
-                        page.categories.forEach((category, i) => {
-                          categories.push(
-                            <a class="link-muted" href={url_for(category.path)}>
-                              {category.name}
-                            </a>
-                          );
-                          if (i < page.categories.length - 1) {
-                            categories.push(<span>&nbsp;/&nbsp;</span>);
-                          }
-                        });
-                        return categories;
-                      })()}
-                    </span>
-                  ) : null}
-                </div>
-              </div>
-            ) : null}
             {/* Title */}
             {page.title !== "" ? (
               <h1
-                class={`title is-${index ? 4 : 3} is-size-${
-                  index ? 2 : 3
-                }-mobile`}
-                style={`font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-weight: 700;margin-bottom: 0.7rem;line-height: ${index ? '30px' : '35px'};letter-spacing: -.03em;`}
+                class={`title is-${index ? 5 : 4} is-size-${index ? 2 : 5}-mobile`}
+                style={`font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-weight: 500;margin-bottom: 5px;line-height: ${'1.3'};`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
@@ -119,15 +91,26 @@ module.exports = class extends Component {
             {/* Metadata */}
             {page.layout !== "page" ? (
               <div
-                class="article-meta is-size-6 has-text-weight-normal level is-mobile"
-                style="margin-bottom: 1.1rem;"
+                class={`article-meta level  is-mobile`}
               >
                 <div class="level-left">
+                  {/* Sticky*/}
+                  {isSticky ? (
+                    <span class="level-item">
+                      <i
+                        class="fas fa-arrow-alt-circle-up"
+                        style="color:#3273dc"
+                      ></i>
+                      <span class="level-item" style="color:#3273dc">
+                        &nbsp;Top
+                      </span>
+                    </span>
+                  ) : null}
                   {/* Creation Date */}
 
                   {page.date && !shouldShowUpdated ? (
                     <span
-                      class="level-item"
+                      class="level-item meta-grey"
                       dangerouslySetInnerHTML={{
                         __html: _p(
                           // "article.created_at",
@@ -143,7 +126,7 @@ module.exports = class extends Component {
                   {/* Last Update Date */}
                   {shouldShowUpdated && (
                     <span
-                      class="level-item"
+                      class="level-item meta-grey"
                       dangerouslySetInnerHTML={{
                         __html: _p(
                           // "article.updated_at",
@@ -156,12 +139,25 @@ module.exports = class extends Component {
                       }}
                     ></span>
                   )}
-                  {/* author */}
-                  {page.author ? (
-                    <span class="level-item"> {page.author} </span>
-                  ) : (
-                    <span class="level-item"> {config.author} </span>
-                  )}
+                  {/* Categories */}
+                  {page.categories && page.categories.length ? (
+                    <span class="level-item brand-color">
+                      {(() => {
+                        const categories = [];
+                        page.categories.forEach((category, i) => {
+                          categories.push(
+                            <a class="link-muted" href={url_for(category.path)}>
+                              {category.name}
+                            </a>
+                          );
+                          if (i < page.categories.length - 1) {
+                            categories.push(<span>,&nbsp;</span>);
+                          }
+                        });
+                        return categories;
+                      })()}
+                    </span>
+                  ) : null}
                   {/* Read time */}
                   {article && article.readtime && article.readtime === true ? (
                     <span class="level-item">
@@ -196,32 +192,16 @@ module.exports = class extends Component {
                 </div>
               </div>
             ) : null}
-            {/* Thumbnail */}
-            {!index && cover ? (
-              <div class="card-image" style="margin-bottom: 21.58px;margin-top: 21.58px;">
-                {!index ? (
-                  <span class="post-image">
-                    <img
-                      class="fill"
-                      src={cover}
-                      loading="eager"
-                      alt={page.title || cover}
-                      style="background-color: #262a35;"
-                    />
-                  </span>
-                ) : null}
-              </div>
-            ) : null}
             {/* Adsense */}
             {!index ? (
               <div>
                 <ins
                   class="adsbygoogle"
-                  style="display:block; margin-top: 0.5rem; margin-bottom: 1rem;"
+                  style="display:block; margin-top: 0.5rem; margin-bottom: 1rem; margin-left: -.95rem; margin-right: -.95rem;"
                   data-ad-client="ca-pub-9870073903926891"
                   data-ad-slot="7851984337"
                   data-ad-format="horizontal"
-                  data-full-width-responsive="true"
+                  data-full-width-responsive="false"
                 ></ins>
                 <script
                   dangerouslySetInnerHTML={{
@@ -234,7 +214,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class={`${index ? "content content-index" : "content"}`}
-              style={`${index ? "font-size: 1.1rem;color: #585b63;letter-spacing: .02em;" : "font-family: Chivo,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;color: #333;letter-spacing: 0.02em;"}`}
+              style={`${index ? "font-size: 14px;color: #5a656b;" : "font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;color: #5a656b;"}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? `${page.excerpt.length > 164 ? page.excerpt.replace(/(.{164})..+/, "$1…") : page.excerpt}` : page.content,
               }}
