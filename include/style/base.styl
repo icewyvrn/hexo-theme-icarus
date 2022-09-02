@@ -86,7 +86,10 @@ $size-1 ?= 1.7rem
 .heading-medium
     font-size: 18px !important
 .heading-large
-    font-size: 23px !important
+    font-size: 27px !important
+
+.image.is-3by1
+    padding-top: 17rem !important
 
 $primary ?= $brand-color
 $custom-colors ?= {
@@ -97,7 +100,7 @@ $custom-colors ?= {
 }
 
 $navbar-item-active-color ?= $primary
-$footer-background-color ?= $scheme-main
+$footer-background-color ?= none
 
 $gap ?= 64px
 $tablet ?= 769px
@@ -138,6 +141,7 @@ $colors = merge($colors, $custom-colors)
 @import bulma-stylus-root + '/layout/_all'
 
 html
+    background: none
     height: 100%
     -webkit-text-size-adjust: 100%
     -moz-text-size-adjust: 100%

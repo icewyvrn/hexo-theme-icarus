@@ -5,7 +5,8 @@ class Footer extends Component {
   render() {
     const {
       logo,
-      logoUrl,
+      logoLightUrl,
+      logoDarkUrl,
       siteUrl,
       siteTitle,
       siteYear,
@@ -20,7 +21,10 @@ class Footer extends Component {
       if (logo.text) {
         footerLogo = logo.text;
       } else {
-        footerLogo = <img src={logoUrl} alt={siteTitle} height="28" width="109.95" />;
+        footerLogo = [
+                    <img class="logo-img" src={logoLightUrl} alt={siteTitle} height="28" width="109.95" />,
+                    <img class="logo-img-dark" src={logoDarkUrl} alt={siteTitle} height="28" width="109.95" />
+                ];
       }
     } else {
       footerLogo = siteTitle;
@@ -73,6 +77,11 @@ class Footer extends Component {
                             })}
                         </div> : null} */}
               <div class="field has-addons">
+                <p class="control" id="night-nav">
+                  <a class="button is-transparent is-large" id="night-icon" title="Toggle Dark Mode" href="javascript:;">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" stroke="currentColor" width="17" id="svg-night" style="padding-bottom: 1px;"><path d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path></svg>
+                        </a>
+                </p>
                 <p class="control">
                   <a
                     class="button is-transparent is-large"
@@ -108,6 +117,9 @@ module.exports = cacheComponent(Footer, "common.footer", (props) => {
   const { config, helper } = props;
   const { url_for, _p, date } = helper;
   const { logo, title, author, footer, plugins } = config;
+  
+  const logoLight = logo instanceof String ? logo : logo.light
+  const logoDark = logo instanceof String ? logo : logo.dark
 
   const links = {};
   if (footer && footer.links) {
@@ -122,7 +134,8 @@ module.exports = cacheComponent(Footer, "common.footer", (props) => {
 
   return {
     logo,
-    logoUrl: url_for(logo),
+    logoLightUrl: url_for(logoLight),
+    logoDarkUrl: url_for(logoDark),
     siteUrl: url_for("/"),
     siteTitle: title,
     siteYear: date(new Date(), "YYYY"),

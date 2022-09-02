@@ -41,18 +41,6 @@ module.exports = class extends Component {
       <Fragment>
         {/* Main content */}
         <div class="card-none" style="border-bottom: 1px dashed #d9d9d9;">
-            {/* Post Hero Image */}
-            {!index && cover ? (
-              <div
-                class="post-cover-full-width"
-              >
-                <a
-                  href={url_for(page.link || page.path)}
-                  title={page.title || cover}
-                  style={`background-image:url(${cover});display: block;width: 100%;height: 100%;background-position: center;background-repeat: no-repeat;background-size: cover;background-color: #262a35;padding: 0;margin: 0;`}
-                ></a>
-              </div>
-            ) : null}
           <article
             class={`card-content article${
               "direction" in page ? " " + page.direction : ""
@@ -192,12 +180,16 @@ module.exports = class extends Component {
                 </div>
               </div>
             ) : null}
+            {/* Post Hero Image */}
+            {!index && cover ? (
+                        <img class="fill" src={cover} alt={page.title || cover} />
+            ) : null}
             {/* Adsense */}
             {!index ? (
               <div>
                 <ins
                   class="adsbygoogle"
-                  style="display:block; margin-top: 0.5rem; margin-bottom: 1rem; margin-left: -.95rem; margin-right: -.95rem;"
+                  style="display:block; margin-top: 1.5rem; margin-bottom: 1rem;"
                   data-ad-client="ca-pub-9870073903926891"
                   data-ad-slot="7851984337"
                   data-ad-format="horizontal"
@@ -214,7 +206,7 @@ module.exports = class extends Component {
             {/* Content/Excerpt */}
             <div
               class={`${index ? "content content-index" : "content"}`}
-              style={`${index ? "font-size: 14px;color: #5a656b;" : "font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;color: #5a656b;"}`}
+              style={`${index ? "font-size: 14px;" : "font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;"}`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? `${page.excerpt.length > 164 ? page.excerpt.replace(/(.{164})..+/, "$1…") : page.excerpt}` : page.content,
               }}

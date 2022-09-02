@@ -1,0 +1,310 @@
+dark-primary-color = #0d0b0b
+dark-primary-color-hover = rgb(67, 74, 86)
+dark-primary-color-active = rgb(44, 49, 58)
+dark-font-color = silver
+dark-background-color = #151313
+dark-border-color = rgba(192,192,192,.169)
+
+#universe
+    display: none
+
+.navbar-logo,
+.navbar-logo-mobile,
+.footer-logo
+    .logo-img-dark
+        display: none
+
+night()
+    background: #151313
+
+    // code highlight (https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css)
+    .hljs{display:block;overflow-x:auto;color:#abb2bf;background:#151313}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}.hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}.hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}.hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}.hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:bold}.hljs-link{text-decoration:underline}
+
+    .content code
+        color: rgb(203,186,125)
+
+    // night icon changed to fas fa-lightbulb
+    #night-nav #night-icon:before
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 352 512' fill='silver' stroke='silver' width='12.5'%3E%3Cpath d='M96.06 454.35c.01 6.29 1.87 12.45 5.36 17.69l17.09 25.69a31.99 31.99 0 0 0 26.64 14.28h61.71a31.99 31.99 0 0 0 26.64-14.28l17.09-25.69a31.989 31.989 0 0 0 5.36-17.69l.04-38.35H96.01l.05 38.35zM0 176c0 44.37 16.45 84.85 43.56 115.78 16.52 18.85 42.36 58.23 52.21 91.45.04.26.07.52.11.78h160.24c.04-.26.07-.51.11-.78 9.85-33.22 35.69-72.6 52.21-91.45C335.55 260.85 352 220.37 352 176 352 78.61 272.91-.3 175.45 0 73.44.31 0 82.97 0 176zm176-80c-44.11 0-80 35.89-80 80 0 8.84-7.16 16-16 16s-16-7.16-16-16c0-61.76 50.24-112 112-112 8.84 0 16 7.16 16 16s-7.16 16-16 16z'/%3E%3C/svg%3E")
+
+    #svg-night
+        display: none
+    
+    // global background
+    #universe
+        background: radial-gradient(1600px at 70% 120%, #212750 10%, #020409 100%)
+        display: block
+        position: fixed
+        margin: 0
+        padding: 0
+        border: 0
+        outline: 0
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        pointer-events: none
+
+    // global brightness
+    img, video, iframe, .waifu, .donate, .post-cover-square, .post-cover-full-width, .message
+        filter: brightness(0.8)
+        -webkit-filter: brightness(0.8)
+
+    // logo
+    .navbar-logo,
+    .navbar-logo-mobile,
+    .footer-logo
+        .logo-img
+            display: none
+        .logo-img-dark
+            display: inline-block
+
+    // navigation bar, cards
+    .navbar-main .navbar-menu .navbar-item
+        &:hover,
+        &:focus
+            color: $brand-color
+            background-color: transparent
+
+    .navbar-main
+        border-bottom-color: #c0c0c02b
+    
+    .navbar
+        background-color: rgba(21, 19, 19, 0.8) !important
+    
+    .card
+        background-color: dark-background-color !important
+        
+    .card
+        &:hover
+            background-color: rgba(40,44,52,0.8)
+    .footer
+        background: none;
+        backdrop-filter: none
+        -webkit-backdrop-filter: none
+        &:before
+            background-color: dark-background-color
+
+    // input
+    .input, .textarea
+        background-color: dark-primary-color-hover
+        border-color: dark-primary-color
+
+    // button
+    .button.is-primary, .button.is-light, .button.is-small
+        background-color: dark-primary-color
+        color: dark-font-color
+        &:hover, &.is-hovered
+            color: #e9e9e9
+            background-color: dark-primary-color-hover
+        &:active, &.is-active
+            color: #e9e9e9
+            background-color: dark-primary-color-active
+    .button.is-white,
+    .button.is-transparent
+        background-color: transparent
+        &:hover
+            background-color: dark-primary-color !important
+    .pagination .pagination-next,
+    .pagination .pagination-previous
+    .pagination-link:not(.is-current)
+        color: dark-font-color
+        background-color: dark-primary-color
+        a
+            color: dark-font-color
+    .pagination-link.is-current
+        background-color: rgba(50,115,220,.659)
+        border-color: rgba(50,115,220,.659)
+
+    // comment
+    .v .vwrap,
+    .v .vwrap .vheader .vinput
+        border-color: dark-primary-color
+    .v .vwrap .vheader .vinput:focus
+        border-color: dark-primary-color-hover
+    .v .vbtn
+        color: dark-font-color
+        background-color: dark-primary-color
+        border-color: dark-primary-color
+        &:hover
+            background-color: dark-primary-color-hover
+        &:active
+            background-color: dark-primary-color-active
+    .v .vlist .vcard .vhead .vsys
+        background-color: dark-primary-color
+    .v a:hover,
+    .v .vlist .vcard .vh .vmeta .vat
+        color: #e9e9e9
+    .v .vlist .vcard .vcontent.expand:before
+        background: -webkit-gradient(linear,left top,left bottom,from(rgba(37,41,54,0)),to(rgba(37,41,54,1)))
+        background: linear-gradient(180deg,rgba(37,41,54,0),rgba(37,41,54,1))
+    .v .vlist .vcard .vcontent.expand:after
+        background: rgba(37,41,54,1)
+    .v .vlist .vcard .vh,
+    .v .vlist .vcard .vquote
+        border-color: dark-primary-color-hover
+    .v code,
+    .v pre
+        background-color: transparent
+        
+    // color override
+    .content
+        color: dark-font-color !important
+    #back-to-top
+        background-color: dark-primary-color !important
+    .card-none
+        border-bottom-color: #c0c0c02b !important
+    .table
+        color: inherit
+        background: none
+    .level-item.brand-color > *
+        color: #3273dc
+    .navbar-item.is-active
+        color: $brand-color !important
+    .button.is-medium
+        background-color: dark-background-color
+        border-color: dark-border-color
+        color: dark-font-color
+    .button:hover
+        background-color: dark-primary-color
+    .tabs.is-toggle a
+        border-color: dark-border-color
+        color: dark-font-color
+    .tabs.is-toggle li.is-active a
+        background-color: $brand-color
+        color: #f2f2f2
+    .tabs.is-toggle a:hover
+        background-color: dark-primary-color
+    
+    // font color
+    body,
+    strong,
+    time,
+    .title,
+    .footer,
+    .card,
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .navbar-item,
+    .navbar-item.is-active,
+    .navbar-link,
+    .menu-list a,
+    .menu-label,
+    .input,
+    .textarea,
+    .button.is-white,
+    .button.is-transparent,
+    .article-licensing,
+    .v *
+        color: dark-font-color
+    .media-content,
+    .has-text-grey,
+    .link-muted
+        color: dark-font-color
+    a
+        color: rgb(82, 153, 224)
+        &:hover
+            color: #e9e9e9
+    .timeline a,
+    [data-type="recent-posts"] a
+        color: dark-font-color
+        &:hover
+            color: #e9e9e9
+
+    // quote
+    .content blockquote,
+    .notification,
+    .article-licensing
+        background-color: dark-primary-color
+        border-color: dark-primary-color-hover
+        color: dark-font-color
+
+    // table
+    .content table thead td,
+    .content table thead th
+        color: dark-font-color
+    .content table td,
+    .content table th
+        border-color: dark-border-color
+        
+    .table.is-striped tbody tr:not(.is-selected):nth-child(2n)
+        background: none
+    .table.is-striped
+        background: none
+
+    // break line
+    hr
+        background-color: dark-primary-color-hover
+
+    // tags and menus
+    .tag:not(body)
+        color: #e9e9e9
+        background-color: rgba(50,115,220,.659)
+    .widget .tags .tag:first-child,
+    .tag.is-grey
+        background-color: $brand-color
+    .tag:last-child
+        background-color: dark-primary-color
+    .menu-list a:hover
+        background-color: dark-primary-color
+    .menu-list a.is-active
+        background-color: dark-primary-color-hover
+    .menu-list li ul
+        border-color: dark-border-color
+
+    // time line
+    .timeline .media:last-child:after
+        background-color: dark-background-color
+    .timeline
+        border-color: dark-primary-color-hover
+    .timeline .media:before
+        background-color: dark-primary-color-hover
+
+    // search box
+    .searchbox
+        .searchbox-container,
+        .searchbox-header,
+        .searchbox-header .searchbox-input,
+        .searchbox-header .searchbox-close,
+        .searchbox-body,
+        .searchbox-result-section,
+        .searchbox-result-item
+            color: dark-font-color
+            background-color: dark-primary-color
+            border-color: dark-primary-color-hover
+        .searchbox-container .searchbox-result-section .searchbox-result-item:hover,
+        .searchbox-container .searchbox-result-section .searchbox-result-item.active,
+        .searchbox-container .searchbox-header .searchbox-close:hover
+            color: #e9e9e9
+            background-color: dark-primary-color-hover
+
+    // selection
+    ::selection
+        color: #e9e9e9
+        background-color: rgba(52,109,167,0.8)
+    ::-moz-selection
+        color: #e9e9e9
+        background-color: rgba(52,109,167,0.8)
+
+    input:-webkit-autofill
+        -webkit-text-fill-color: dark-font-color !important
+        box-shadow: 0 0 0px 1000px dark-primary-color inset
+
+    // twikoo
+    .twikoo
+        pre
+            background-color: dark-primary-color
+        code
+            color: rgb(203,186,125)
+            background-color: dark-primary-color
+
+body.night
+    night()
+
+@media (prefers-color-scheme: dark)
+    body:not(.light)
+        night()
