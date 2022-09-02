@@ -261,8 +261,8 @@ module.exports = class extends Component {
               class="adsbygoogle"
               style="display:block"
               data-ad-client="ca-pub-9870073903926891"
-              data-ad-slot="8204349881"
-              data-ad-format="horizontal"
+              data-ad-slot="7302679178"
+              data-ad-format="auto"
               data-full-width-responsive="true"
             ></ins>
             <script
