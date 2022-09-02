@@ -262,7 +262,7 @@ module.exports = class extends Component {
               style="display:block"
               data-ad-client="ca-pub-9870073903926891"
               data-ad-slot="7302679178"
-              data-ad-format="auto"
+              data-ad-format="horizontal"
               data-full-width-responsive="true"
             ></ins>
             <script
