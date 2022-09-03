@@ -7,8 +7,15 @@
         width: $desktop - 2 * $gap
 
     .is-1-column .container
-        max-width: 760px
-        width: 760px
+        max-width: 860px
+        width: 730px
+        
+    .ad-container
+        width: 860px
+    .ad-1
+        transform: translateX(-8.4%)
+    .ad-2
+        transform: translateX(-6.8%)
 
 +fullhd()
     .is-2-column .container
@@ -16,8 +23,15 @@
         width: $widescreen - 2 * $gap
 
     .is-1-column .container
-        max-width: 760px
-        width: 760px
+        max-width: 860px
+        width: 730px
+        
+    .ad-container
+        width: 860px
+    .ad-1
+        transform: translateX(-8.4%)
+    .ad-2
+        transform: translateX(-6.8%)
 
 +tablet()
     .is-sticky
@@ -32,6 +46,8 @@
             align-self: flex-start
 
 +mobile()
+    .article-container
+        width: 100%
     .section
         padding: 0.6rem 1rem !important
     .column
@@ -72,8 +88,6 @@
         font-size: 17px !important
     .heading-large-mobile
         font-size: 27px !important
-    .content
-        font-size: 15.5px !important
     .content-index
         font-size: 14px !important
     .image.is-3by1

@@ -64,8 +64,7 @@ module.exports = class extends Component {
             {/* Title */}
             {page.title !== "" ? (
               <h1
-                class={`title heading-${index ? 'medium' : 'large'} heading-${index ? 'medium' : 'large'}-mobile `}
-                style={`font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;font-weight: 500;margin-bottom: 5px;line-height: ${'1.3'};`}
+                class={`title heading-${index ? 'medium' : 'large'} heading-${index ? 'medium' : 'large'}-mobile is-family-sans-serif`}
               >
                 {index ? (
                   <a class="link-muted" href={url_for(page.link || page.path)}>
@@ -182,11 +181,11 @@ module.exports = class extends Component {
             ) : null}
             {/* Post Hero Image */}
             {!index && cover ? (
-                        <img class="fill" src={cover} alt={page.title || cover} />
+                        <img class="fill cover-img" src={cover} alt={page.title || cover} />
             ) : null}
             {/* Adsense */}
             {!index ? (
-              <div>
+              <div class="ad-container ad-1">
                 <ins
                   class="adsbygoogle"
                   style="display:block; margin-top: 1.5rem; margin-bottom: 1rem;"
@@ -205,8 +204,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Content/Excerpt */}
             <div
-              class={`${index ? "content content-index" : "content"}`}
-              style={`${index ? "font-size: 14px;" : "font-family: Ubuntu,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;"}`}
+              class={`${index ? "content content-index" : "content"} is-family-sans-serif`}
               dangerouslySetInnerHTML={{
                 __html: index && page.excerpt ? `${page.excerpt.length > 164 ? page.excerpt.replace(/(.{164})..+/, "$1…") : page.excerpt}` : page.content,
               }}
@@ -256,7 +254,7 @@ module.exports = class extends Component {
         </div>
         {/* Adsense */}
         {!index ? (
-          <div style="margin-top: 1rem;">
+          <div div class="ad-container ad-2" style="margin-top: 1rem;">
             <ins
               class="adsbygoogle"
               style="display:block"
