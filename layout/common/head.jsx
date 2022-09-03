@@ -136,7 +136,7 @@ module.exports = class extends Component {
         <meta charset="utf-8" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1, maximum-scale=1"
+          content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/00d3bf7ff0f7bf0d677297aa28fce901374c1360/c5c09/fonts/overpass-var.woff2" rel="preload" />
         <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/fc04d6f527979c163508a420f7ebe29e731f4554/b9cc7/fonts/overpass-italic-var.woff2" rel="preload" />
