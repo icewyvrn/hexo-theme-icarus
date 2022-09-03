@@ -185,7 +185,7 @@ module.exports = class extends Component {
             ) : null}
             {/* Adsense */}
             {!index ? (
-              <div class="ad-container ad-1">
+              <div class="ad-container">
                 <ins
                   class="adsbygoogle"
                   style="display:block; margin-top: 1.5rem; margin-bottom: 1rem;"
@@ -254,7 +254,7 @@ module.exports = class extends Component {
         </div>
         {/* Adsense */}
         {!index ? (
-          <div div class="ad-container ad-2" style="margin-top: 1rem;">
+          <div div class="ad-container" style="margin-top: 1rem;">
             <ins
               class="adsbygoogle"
               style="display:block"
