@@ -138,9 +138,8 @@ module.exports = class extends Component {
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1"
         />
-        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/8d0b1718aacad934fd0043c87cbc54aa091396bf/6485b/fonts/ubuntu-v20-latin-regular.woff2" rel="preload" />
-        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/0e9f9333078e5df9245630ff6f68ba1d9da3c403/0a3e5/fonts/ubuntu-v20-latin-500.woff2" rel="preload" />
-        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/fb4ed2e52e2a8d7ac50a7618a0c2ea5507a24ef3/f269c/fonts/ubuntu-v20-latin-700.woff2" rel="preload" />
+        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/00d3bf7ff0f7bf0d677297aa28fce901374c1360/c5c09/fonts/overpass-var.woff2" rel="preload" />
+        <link as="font" crossorigin="anonymous" href="https://d33wubrfki0l68.cloudfront.net/fc04d6f527979c163508a420f7ebe29e731f4554/b9cc7/fonts/overpass-italic-var.woff2" rel="preload" />
         {noIndex ? <meta name="robots" content="noindex" /> : null}
         {meta && meta.length ? <MetaTags meta={meta} /> : null}
 
