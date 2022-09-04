@@ -126,6 +126,8 @@ module.exports = class extends Component {
                       }}
                     ></span>
                   )}
+                  {/* author */}
+                  {!index ? (<span class="level-item meta-grey"> by {page.author ? page.author : config.author} </span>) : null}
                   {/* Categories */}
                   {page.categories && page.categories.length ? (
                     <span class="level-item brand-color">
