@@ -14,9 +14,10 @@
     $('.article img').addClass('img-zoomable');
     
     const zooming = new Zooming({
+    bgColor: 'rgb(1, 1, 1)', bgOpacity: 0.7, enableGrab: false
   })
   zooming.listen('.img-zoomable')
-    
+        
     if (typeof $.fn.justifiedGallery === 'function') {
         if ($('.justified-gallery > p > .gallery-item').length) {
             $('.justified-gallery > p > .gallery-item').unwrap();
