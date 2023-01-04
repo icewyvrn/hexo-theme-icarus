@@ -25,7 +25,7 @@ Twikoo.Cacheable = cacheComponent(Twikoo, 'comment.twikoo', (props) => {
   const { comment } = props;
   return {
     envId: comment.envId,
-    jsUrl: 'https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js',
+    jsUrl: 'https://cdn.jsdelivr.net/npm/twikoo@1.6.8/dist/twikoo.all.min.js',
   };
 });
 
