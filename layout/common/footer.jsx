@@ -44,18 +44,6 @@ class Footer extends Component {
                     __html: `&copy; ${siteYear} ${siteTitle}`,
                   }}
                 ></span>
-                &nbsp;&nbsp;Powered by{" "}
-                <a href="https://hexo.io/" target="_blank" rel="noopener">
-                  Hexo
-                </a>
-                &nbsp;&&nbsp;
-                <a
-                  href="https://github.com/ppoffice/hexo-theme-icarus"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Icarus
-                </a>
                 {showVisitorCounter ? <br /> : null}
                 {showVisitorCounter ? (
                   <span
